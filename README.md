@@ -1,4 +1,6 @@
-# Battery Swap Fix (Linux) for Lenovo T470s
+# Battery Swap Fix (Linux) for Lenovo T460s / Ubuntu 16.04
+
+(forked from https://github.com/mickare/battery_swap_fix)
 
 Scripts to automatically set `charge_start_threshold` to reasonable values, so the batteries are charged and switched correctly.
 
@@ -20,4 +22,4 @@ To uninstall run `sudo ./uninstall.sh`.
 In both cases your system could need a restart, so `udev` can reload the event monitoring rules correctly.
 
 ## Tested Devices:
-- Lenovo T470s
+- Lenovo T460s

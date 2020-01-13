@@ -13,7 +13,7 @@ fi
 charge_start_threshold=0
 if [ "$CHOICE" -eq 0 ]; then
 	echo "Battery-Swap-Fix: Charging Mode"
-	charge_start_threshold=0
+	charge_start_threshold=96
 else
 	echo "Battery-Swap-Fix: Battery Swap Mode"
 	charge_start_threshold=$SWAP_THRESHOLD
@@ -21,5 +21,5 @@ fi
 
 # Apply threshold to all batteries
 for bat in $(ls -d /sys/class/power_supply/BAT*); do
-	echo "$charge_start_threshold" > ${bat}/charge_start_threshold
+    tlp setcharge $charge_start_threshold 100 `basename $bat`
 done
