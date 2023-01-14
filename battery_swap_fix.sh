@@ -12,10 +12,10 @@ fi
 # Set the threshold
 charge_start_threshold=0
 if [ "$CHOICE" -eq 0 ]; then
-	echo "Battery-Swap-Fix: Charging Mode"
+	logger "Battery-Swap-Fix: Charging Mode"
 	charge_start_threshold=96
 else
-	echo "Battery-Swap-Fix: Battery Swap Mode"
+	logger "Battery-Swap-Fix: Battery Swap Mode"
 	charge_start_threshold=$SWAP_THRESHOLD
 fi
 

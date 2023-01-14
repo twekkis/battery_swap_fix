@@ -13,6 +13,13 @@ By enabling `charge_start_threshold`, by using a number greater than 0, the batt
 
 This project tries to mitigate this dilema, by automatically setting the `charge_start_threshold` values accordingly to the current AC power status.
 
+## Required packages
+tpg
+...
+sudo apt install tlp
+sudo systemctl enable tlp.service 
+sudo systemctl start tlp.service 
+
 ## Installation
 
 To install run `sudo ./install.sh`.
@@ -22,4 +29,5 @@ To uninstall run `sudo ./uninstall.sh`.
 In both cases your system could need a restart, so `udev` can reload the event monitoring rules correctly.
 
 ## Tested Devices:
-- Lenovo T460s
+- Lenovo T460s, Linux Mint 21.1
+
